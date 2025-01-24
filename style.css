@@ -147,12 +147,9 @@ body{
   }
    
   @media all and (max-width: 768px) {
-    html{
-        height: 100%;
-        width: auto;
-    }
     .timer{
-        margin-top: -8vh;
+        margin-top: -10vh;
+        margin-bottom: -15vh;
     }
     .timer h2 {
         font-size: 24px;
