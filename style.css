@@ -214,14 +214,14 @@ object-fit: contain;
 
     }
     .game-line {
-        margin-top: 10vh;
+        margin-top: 5vh;
     }
     .game-line li {
         gap: 30px;
     }
     @keyframes scroll {
-        0% { transform: translateX(250%); }
-        100% { transform: translateX(-250%); }
+        0% { transform: translateX(300%); }
+        100% { transform: translateX(-300%); }
     }
 }
 
