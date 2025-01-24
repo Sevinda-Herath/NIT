@@ -152,7 +152,7 @@ body{
         width: auto;
     }
     .timer{
-        height: 40vh;
+        margin-top: -5vh;
     }
     .timer h2 {
         font-size: 24px;
@@ -213,6 +213,9 @@ object-fit: contain;
         filter: grayscale(0%);
 
     }
+    .game-line {
+        margin-top: 10vh;
+    }
     .game-line li {
         gap: 30px;
     }
@@ -238,6 +241,7 @@ object-fit: contain;
 
     }
     .brand-logos img{
+        
         height: 50px;
         padding: 15px 10px;
         border-radius: 5px;
