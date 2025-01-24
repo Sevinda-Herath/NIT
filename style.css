@@ -226,6 +226,7 @@ object-fit: contain;
     transition: all 0.3s ease;
     margin: 50px auto;
     display: block;
+
 }
 
 @media all and (max-width: 768px) {
@@ -236,5 +237,8 @@ object-fit: contain;
     }
     .brand-logos img{
         height: 50px;
+        padding: 15px 10px;
+        border-radius: 5px;
+        background-color: #29438b;
     }
 }
