@@ -213,9 +213,6 @@ object-fit: contain;
         filter: grayscale(0%);
 
     }
-    .game-line {
-        margin-top: 5vh;
-    }
     .game-line li {
         gap: 30px;
     }
