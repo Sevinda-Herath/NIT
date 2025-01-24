@@ -24,6 +24,10 @@
         // If the countdown is finished, display message
         if (distance < 0) {
             clearInterval(x);
+            document.getElementById("rm").innerHTML = "";
+            document.getElementsByClassName("register")[0].style.display = "none";
+            document.getElementsByClassName("register-nav")[0].style.display = "none";
             document.getElementById("countdown").innerHTML = "<span style='color: #ff0000; font-size: 48px; font-weight: bold; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin: 50px 0;'>TOURNAMENT HAS STARTED</span>";
         }
         }, 1000);
+
