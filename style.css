@@ -226,7 +226,6 @@ object-fit: contain;
     transition: all 0.3s ease;
     margin: 50px auto;
     display: block;
-
 }
 
 @media all and (max-width: 768px) {
@@ -240,5 +239,9 @@ object-fit: contain;
         padding: 15px 10px;
         border-radius: 5px;
         background-color: #29438b;
+    }
+    .brand-logos img:hover{
+        transform: scale(1.1);
+        box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
     }
 }
