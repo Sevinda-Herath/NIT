@@ -9,26 +9,29 @@
 <body>
     <div class="navbar">
         <nav>
-            <div class="logo"><h1>NIT Inner Faculty Esport TOURNAMENT</h1></div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#content">Content</a></li>
-                <li><a href="#register">Register</a></li>
+                <li><a  class="nav" href="#home">Home</a></li>
+                <li><a class="nav" href="#about">About</a></li>
+                <li><a class="nav" href="#content">Content</a></li>
+                <li><a class="register-nav" href="#register">Register</a></li>
             </ul>
         </nav>
     </div>
     <div class="content">
         <div class="timer">
             <h2>TOURNAMENT STARTS IN</h2>
-            <p>Timer</p>
+            <div id="countdown">
+                  <li><span id="days"></span>days</li>
+                  <li><span id="hours"></span>Hours</li>
+                  <li><span id="minutes"></span>Minutes</li>
+                  <li><span id="seconds"></span>Seconds</li>
+            </div>
             <div class="register">
                 <button>Register Your Team</button>
             </div>
         </div>
     <div class="brand-logos">
-        <li><img class="" src="" alt="NIT Logo"></li>
-        <li><img class="" src="" alt=""></li>
+        <li><img class="" src="/images/NIT.png" alt="NIT Logo"></li>
     </div>
     <div class="game-line">
         <li>
@@ -42,6 +45,6 @@
         </li>
     </div>
     </div>
-
+    <script src="/js/timer.js"></script>
 </body>
 </html>
