@@ -217,8 +217,8 @@ object-fit: contain;
         gap: 30px;
     }
     @keyframes scroll {
-        0% { transform: translateX(300%); }
-        100% { transform: translateX(-300%); }
+        0% { transform: translateX(325%); }
+        100% { transform: translateX(-325%); }
     }
 }
 
