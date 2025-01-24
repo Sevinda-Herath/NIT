@@ -4,23 +4,10 @@
         hour = minute * 60,
         day = hour * 24;
 
-  //I'm adding this section so I don't have to keep updating this pen every year :-)
-  //remove this if you don't need it
-  let today = new Date(),
-      dd = String(today.getDate()).padStart(2, "0"),
-      mm = String(today.getMonth() + 1).padStart(2, "0"),
-      yyyy = today.getFullYear(),
-      nextYear = yyyy + 1,
-      dayMonth = "02/15/",
-      birthday = dayMonth + yyyy;
+  // Set target date to Feb 15, 2024 in Sri Lanka time (UTC+5:30)
+  const targetDate = new Date('2024-02-15T00:00:00+05:30');
   
-  today = mm + "/" + dd + "/" + yyyy;
-  if (today > birthday) {
-    birthday = dayMonth + nextYear;
-  }
-  //end
-  
-  const countDown = new Date(birthday).getTime(),
+  const countDown = targetDate.getTime(),
       x = setInterval(function() {    
 
         const now = new Date().getTime(),
