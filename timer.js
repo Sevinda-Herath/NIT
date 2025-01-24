@@ -1,30 +1,29 @@
-(function () {
-  const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
+    // Set the date we're counting down to (Sri Lanka time)
+    var countDownDate = new Date("Feb 15, 2025 00:00:00").getTime();
 
-  // Set target date to Feb 15, 2024 in Sri Lanka time (UTC+5:30)
-  const targetDate = new Date('2024-02-15T00:00:00+05:30');
-  
-  const countDown = targetDate.getTime(),
-      x = setInterval(function() {    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+        // Get current date and time
+        var now = new Date().getTime();
 
-        const now = new Date().getTime(),
-              distance = countDown - now;
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
 
-        document.getElementById("days").innerText = Math.floor(distance / (day)),
-          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+        // Time calculations
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        //do something later when date is reached
+        // Display the results
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        // If the countdown is finished, display message
         if (distance < 0) {
-          document.getElementById("headline").innerText = "Game ON !!! ";
-          document.getElementById("countdown").style.display = "none";
-          document.getElementById("content").style.display = "block";
-          clearInterval(x);
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "<span style='color: #ff0000; font-size: 48px; font-weight: bold; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin: 50px 0;'>TOURNAMENT HAS STARTED</span>";
         }
-        //seconds
-      }, 0)
-  }());
+        }, 1000);
