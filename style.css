@@ -213,6 +213,10 @@ object-fit: contain;
     .game-line li {
         gap: 30px;
     }
+    @keyframes scroll {
+        0% { transform: translateX(200%); }
+        100% { transform: translateX(-200%); }
+    }
 }
 
 /* Brand Logos */
