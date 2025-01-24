@@ -1,5 +1,5 @@
     // Set the date we're counting down to (Sri Lanka time)
-    var countDownDate = new Date("Feb 15, 2025 00:00:00").getTime();
+    var countDownDate = new Date("Feb 15, 2025 09:30:00").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
