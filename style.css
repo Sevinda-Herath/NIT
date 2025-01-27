@@ -213,6 +213,9 @@ object-fit: contain;
     .game-line li {
         gap: 30px;
     }
+    .game-line{
+        margin-top: 15vh;
+    }
     @keyframes scroll {
         0% { transform: translateX(325%); }
         100% { transform: translateX(-325%); }
