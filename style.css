@@ -301,6 +301,12 @@ iframe{
     backdrop-filter: blur(100px);
 
 }
+.about{
+    box-shadow: 0 0 50px rgba(43, 255, 255, 0.5);
+}
+.contact{
+    box-shadow: 0 0 50px rgba(207, 30, 207, 0.5);
+}
 .about h2, .contact h2{
     font-size: 3.5rem;
     font-family: "Bebas Neue", serif;
@@ -322,6 +328,8 @@ iframe{
         margin-left: auto;
         margin-right: auto;
     }
+
+
     .about h2, .contact h2{
         font-size: 2.5rem;
         font-weight: 300;
