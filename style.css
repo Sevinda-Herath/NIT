@@ -9,13 +9,10 @@ html{
 }
 
 body{
+    overflow: hidden;
     margin: 0;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.932);
-    background-image: url('https://raw.githubusercontent.com/Sevinda-Herath/NIT-Esports-Inner-Fac-Website/refs/heads/main/images/Ghost-img.png');
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    background-size: 600px;
     cursor: url('https://raw.githubusercontent.com/Sevinda-Herath/NIT-Esports-Inner-Fac-Website/refs/heads/main/images/cursor.png'), auto;
 
 }
@@ -60,39 +57,42 @@ body{
 .register-nav{
     color: white;
     padding: 10px 20px;
-    border: 1px solid purple;
+    border: 1px solid #00ff00;
     border-radius: 15px;
 }
 .nav:hover {
     color: white;
-    text-shadow: 0 0  100px white;
+    text-shadow: 0 0 20px white, 0 0 50px white, 0 0 80px white;
+    transform: scale(1.1);
 }
 .register-nav:hover {
-    background-color: purple;
-    box-shadow: 0 0  15px purple;
+    background-color: #00ff00;
+    color: black;
+    box-shadow: 0 0  15px #00ff00;
 }
 
 /* Button */
 .register button{
-    background: linear-gradient(45deg, #6b2cf5, #d940ff);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 24px 48px;
-    border: none;
     border-radius: 25px;
     font-size: 2.5rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(107, 44, 245, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid #00ff00;
     font-family: "Smooch Sans", serif;
     font-weight: 500;
     font-style: normal;
+    backdrop-filter: blur(5px);
 }
 
 .register button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(217, 64, 255, 0.4);
-    background: linear-gradient(45deg, #d940ff, #6b2cf5);
+    box-shadow: 0 6px 20px rgba(0, 255, 0, 0.4);
+    background: linear-gradient(45deg, #00ff00, #003300);
 }
 
 .register button:active {
@@ -117,6 +117,8 @@ body{
         padding: 12px 24px;
         font-size: 1.5rem;
     }
+
+    
   }
 
 
@@ -320,6 +322,13 @@ iframe{
     font-weight: 300;
     font-style: normal;
     margin-bottom: 40px;
+}
+.contact a{
+    color: white;
+    text-decoration: none;
+}
+.contact a:hover{
+    color: #6b2cf5;
 }
 @media all and (max-width: 768px){
     .about, .contact{

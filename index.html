@@ -48,5 +48,39 @@
     </div>
     </div>
     <script src="timer.js"></script>
+    <script src="metrix.js"></script>
+    <style>
+        .bg-img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            width: 40%;
+            height: auto;
+            max-width: 650px;
+            min-width: 500px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .bg-img {
+            overflow: hidden;
+            width: 60%;
+            min-width: 500px;
+            left: 55%;
+            transform: translateX(-50%);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .bg-img {
+            overflow: hidden;
+            width: 80%;
+            min-width: 320px;
+            left: 55%;
+            transform: translateX(-50%);
+            }
+        }
+    </style>
+<img class="bg-img" src="https://raw.githubusercontent.com/Sevinda-Herath/NIT-Esports-Inner-Fac-Website/refs/heads/main/images/Ghost-img.png" alt="Background Image">
 </body>
 </html>
