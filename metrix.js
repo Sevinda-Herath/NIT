@@ -9,7 +9,7 @@ canvas.style.zIndex = '-1'; // Places the canvas behind other content
 document.body.appendChild(canvas);
 
 const ctx = canvas.getContext('2d');
-const letters = 'ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ';
+const letters = 'ABCDEFGHIJKLMNSEVINDAXYZABCDEFGHIJKLMNOPHERATHXYZABCDEFGHIFUCKNOPQRSTUVXYZYOUDEFGHIJKLMNOPQRSTUVXYZ';
 const numbers = '0123456789';
 const alphabet = letters + numbers;
 
