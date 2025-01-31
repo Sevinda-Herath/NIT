@@ -38,6 +38,9 @@ body{
         transform: translateY(0);
     }
 }
+.active{
+    color: #00FF00;
+}
 
 .navbar ul {
     width: 100%;
@@ -66,7 +69,7 @@ body{
     font-weight: 600;
     font-style: normal;
 }
-.nav{
+.gray{
     color: gray;
 }
 .register-nav{
