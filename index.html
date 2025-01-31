@@ -139,9 +139,10 @@ window.addEventListener('load', function() {
 }
 
 .terminal {
-    width: 80%;
+    width: 90%;
     max-width: 800px;
-    height: 400px;
+    height: auto;
+    min-height: 300px;
     background-color: #000;
     border: 4px double #0f0;
     border-radius: 15px;
@@ -150,6 +151,7 @@ window.addEventListener('load', function() {
     color: #0f0;
     overflow: hidden;
     position: relative;
+    margin: 10px;
 }
 
 .skip-button {
@@ -171,8 +173,9 @@ window.addEventListener('load', function() {
 }
 
 #terminal-content {
-    font-size: 16px;
+    font-size: clamp(14px, 2.5vw, 16px);
     line-height: 1.5;
+    word-wrap: break-word;
 }
 
 #terminal-content::after {
@@ -182,6 +185,31 @@ window.addEventListener('load', function() {
 
 @keyframes blink {
     50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .terminal {
+        width: 95%;
+        min-height: 450px;
+        padding: 15px;
+        font-size: 13px;
+    }
+    
+    .skip-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 550px) {
+    .terminal {
+        width: 90%;
+        min-height: 350px;
+        font-size: 10px;
+    }
+    .skip-button {
+        font-size: 11px;
+    }
 }
 </style>
 </body>
