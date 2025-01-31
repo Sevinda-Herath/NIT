@@ -405,7 +405,7 @@ iframe{
     text-decoration: none;
 }
 .contact a:hover{
-    color: #6b2cf5;
+    color: #0f0;
 }
 @media all and (max-width: 768px){
     .about, .contact{
