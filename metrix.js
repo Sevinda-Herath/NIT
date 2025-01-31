@@ -5,7 +5,7 @@ canvas.style.left = '0';
 canvas.style.width = '100%';
 canvas.style.height = '100%';
 canvas.style.pointerEvents = 'none'; // This allows clicking through the canvas
-canvas.style.zIndex = '-1'; // Places the canvas behind other content
+canvas.style.zIndex = '-999'; // Places the canvas behind other content
 document.body.appendChild(canvas);
 
 const ctx = canvas.getContext('2d');
