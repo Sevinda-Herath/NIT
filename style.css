@@ -22,6 +22,18 @@ body{
     width: 100%;
     height: auto;
     padding: 15px 0;
+    animation: fadeInDown 2s ease-out;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .navbar ul {
@@ -87,6 +99,8 @@ body{
     font-weight: 500;
     font-style: normal;
     backdrop-filter: blur(5px);
+    animation: fadeInDown 4s ease-out;
+    animation-fill-mode: forwards;
 }
 
 .register button:hover {
@@ -133,6 +147,8 @@ body{
     flex-direction: column;
     color: white;
     text-align: center;
+    animation: fadeInDown 4s ease-out;
+    animation-fill-mode: forwards;
 }
   .timer .container {
     color: #333;
@@ -198,6 +214,8 @@ body{
     padding: 20px 0;
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 15px rgba(66, 62, 62, 0.2);
+    animation: fadeIn 15s ease-out;
+    animation-fill-mode: forwards;
 
 }
 
@@ -254,6 +272,8 @@ object-fit: contain;
     transition: all 0.3s ease;
     margin: 50px auto;
     display: block;
+    animation: fadeInDown 6s ease-out;
+    animation-fill-mode: forwards;
 }
 
 @media all and (max-width: 768px) {
@@ -287,6 +307,17 @@ object-fit: contain;
     height: auto;
     max-width: 650px;
     min-width: 500px;
+    animation: fadeIn 20s ease-out;
+    animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
 }
 
 @media screen and (max-width: 768px) {
@@ -314,6 +345,8 @@ iframe{
     width: 100%;
     height: 85vh;
     border: none;
+    animation: fadeInDown 4s ease-out;
+    animation-fill-mode: forwards;
 }
 /* about.html */
 .about, .contact{
@@ -337,9 +370,13 @@ iframe{
 }
 .about{
     box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 4s ease-out;
+    animation-fill-mode: forwards;
 }
 .contact{
     box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 4s ease-out;
+    animation-fill-mode: forwards;
 }
 .about h2, .contact h2{
     font-size: 3.5rem;
