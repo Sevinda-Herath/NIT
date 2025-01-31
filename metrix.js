@@ -4,8 +4,8 @@ canvas.style.top = '0';
 canvas.style.left = '0';
 canvas.style.width = '100%';
 canvas.style.height = '100%';
-canvas.style.pointerEvents = 'none'; // This allows clicking through the canvas
-canvas.style.zIndex = '-999'; // Places the canvas behind other content
+canvas.style.pointerEvents = 'none';
+canvas.style.zIndex = '-999';
 document.body.appendChild(canvas);
 
 const ctx = canvas.getContext('2d');
@@ -16,8 +16,8 @@ const alphabet = letters + numbers;
 let fontSize = 10;
 let columns = canvas.width / fontSize;
 let drops = [];
+let animationInterval;
 
-// Initialize the drops array
 function initDrops() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -28,7 +28,6 @@ function initDrops() {
     }
 }
 
-// Draw the animation
 function draw() {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -45,9 +44,10 @@ function draw() {
     }
 }
 
-// Handle window resize
 window.addEventListener('resize', initDrops);
 
-// Initialize and start animation
+// Initialize and start animation with delay
 initDrops();
-setInterval(draw, 33);
+setTimeout(() => {
+    animationInterval = setInterval(draw, 33);
+}, 12000); // 2000ms = 2 seconds delay

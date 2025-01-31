@@ -49,6 +49,113 @@
     </div>
     <script src="timer.js"></script>
     <script src="metrix.js"></script>
+    
 <img class="bg-img" src="https://raw.githubusercontent.com/Sevinda-Herath/NIT-Esports-Inner-Fac-Website/refs/heads/main/images/Ghost-img.png" alt="Background Image">
+
+<div id="loading-screen">
+    <div class="terminal">
+        <div id="terminal-content"></div>
+    </div>
+</div>
+
+<script>
+const messages = [
+    'Initializing NIT Esports Tournament...',
+    'Loading game assets...',
+    'Configuring tournament brackets...',
+    'Establishing secure connection...',
+    'System ready. Welcome player!'
+];
+
+window.addEventListener('load', function() {
+    const terminalContent = document.getElementById('terminal-content');
+    let messageIndex = 0;
+
+    // Hide main content and pause all animations
+    document.body.style.visibility = 'hidden';
+    document.documentElement.style.setProperty('--animation-play-state', 'paused');
+    document.getElementById('loading-screen').style.visibility = 'visible';
+
+    function typeMessage(message) {
+        let i = 0;
+        const interval = setInterval(() => {
+            terminalContent.innerHTML += message.charAt(i);
+            i++;
+            if (i === message.length) {
+                clearInterval(interval);
+                terminalContent.innerHTML += '<br>>';
+                messageIndex++;
+                if (messageIndex < messages.length) {
+                    setTimeout(() => typeMessage(messages[messageIndex]), 500);
+                } else {
+                    setTimeout(() => {
+                        document.getElementById('loading-screen').style.opacity = '0';
+                        // Show main content and resume animations
+                        document.body.style.visibility = 'visible';
+                        document.documentElement.style.setProperty('--animation-play-state', 'running');
+                        setTimeout(() => {
+                            document.getElementById('loading-screen').style.display = 'none';
+                        }, 500);
+                    }, 1000);
+                }
+            }
+        }, 50);
+    }
+
+    typeMessage(messages[0]);
+});
+</script>
+
+<style>
+/* Add this to control all animations */
+:root {
+    --animation-play-state: paused;
+}
+
+* {
+    animation-play-state: var(--animation-play-state) !important;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s;
+    visibility: visible;
+}
+
+.terminal {
+    width: 80%;
+    max-width: 600px;
+    height: 300px;
+    background-color: #000;
+    border: 2px solid #0f0;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+    color: #0f0;
+    overflow: hidden;
+}
+
+#terminal-content {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#terminal-content::after {
+    content: '▋';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+</style>
 </body>
 </html>
