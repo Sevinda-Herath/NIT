@@ -327,6 +327,7 @@ object-fit: contain;
     min-width: 500px;
     left: 55%;
     transform: translateX(-50%);
+    filter: grayscale(100%);
     }
 }
 
