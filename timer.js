@@ -1,5 +1,5 @@
     // Set the date we're counting down to (Sri Lanka time)
-    var countDownDate = new Date("Feb 15, 2025 09:30:00").getTime();
+    var countDownDate = new Date("Feb 11, 2025 09:30:00").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
@@ -27,7 +27,7 @@
             document.getElementById("rm").innerHTML = "";
             document.getElementsByClassName("register")[0].style.display = "none";
             document.getElementsByClassName("register-nav")[0].style.display = "none";
-            document.getElementById("countdown").innerHTML = "<span style='color: #ff0000; font-size: 48px; font-weight: bold; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin: 50px 0;'>TOURNAMENT HAS STARTED</span>";
+            document.getElementById("countdown").innerHTML = "<span style='color: #ff0000; font-size: 48px; font-weight: bold; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin: 50px 0;'>Fuck This I'm Done. LoL. Also Happy Birthday to Me. !!!</span>";
         }
         }, 1000);
 
