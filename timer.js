@@ -27,7 +27,8 @@
             document.getElementById("rm").innerHTML = "";
             document.getElementsByClassName("register")[0].style.display = "none";
             document.getElementsByClassName("register-nav")[0].style.display = "none";
-            document.getElementById("countdown").innerHTML = "<span style='color: #ff0000; font-size: 48px; font-weight: bold; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin: 50px 0;'>Fuck This I'm Done. LoL. Also Happy Birthday to Me. !!!</span>";
-        }
+            document.getElementsByClassName("brand-logos")[0].style.display = "none";
+                        document.getElementById("countdown").innerHTML = "<span style='color:rgb(0, 255, 0); font-size: 48px; font-weight: bold; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-family: \"Smooch Sans\", serif; margin: 50px 0;'>Fuck This I'm Done..... :')  Also Happy Birthday to Me. !!!</span>";
+                    }
         }, 1000);
 
