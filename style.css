@@ -188,7 +188,7 @@ body{
   @media all and (max-width: 768px) {
     .timer{
         height: 45vh;
-        margin-bottom: -5vh;
+        margin-bottom: -8vh;
 
     }
     .timer h2 {
