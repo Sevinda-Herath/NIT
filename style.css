@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Smooch+Sans:wght@100..900&display=swap');
 
+::selection {
+    background: #00ff00;
+    color: black;
+}
 html{
     font-size: 16px;
     scroll-behavior: smooth;
     height: 100vh;
-    cursor: url('https://raw.githubusercontent.com/Sevinda-Herath/NIT-Esports-Inner-Fac-Website/refs/heads/main/images/cursor.png'), auto;
 }
 
 body{
@@ -13,8 +16,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.932);
-    cursor: url('https://raw.githubusercontent.com/Sevinda-Herath/NIT-Esports-Inner-Fac-Website/refs/heads/main/images/cursor.png'), auto;
-
+    cursor: url('images/icons8-3d-pointer-30.png'), auto;
 }
 /* Navbar */
 
