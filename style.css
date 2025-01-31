@@ -24,6 +24,7 @@ body{
     padding: 15px 0;
     animation: fadeInDown 2s ease-out;
     animation-fill-mode: forwards;
+    z-index: 1000;
 }
 @keyframes fadeInDown {
     from {
@@ -186,8 +187,9 @@ body{
    
   @media all and (max-width: 768px) {
     .timer{
-        margin-top: -10vh;
-        margin-bottom: -15vh;
+        height: 45vh;
+        margin-bottom: -5vh;
+
     }
     .timer h2 {
         font-size: 28px;
