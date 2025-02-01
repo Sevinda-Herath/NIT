@@ -57,6 +57,7 @@
     bottom: 15px;
     left: 20px;
     cursor: pointer;
+    
 }
 
 .skip-button:hover {
@@ -100,5 +101,11 @@
     }
     .skip-button {
         font-size: 11px;
+    }
+    .validator img{
+        width: auto;
+        height: 25px;
+        margin-bottom: 3px;
+
     }
 }
