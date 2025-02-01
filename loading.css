@@ -52,6 +52,12 @@
     font-family: 'Ubuntu', monospace;
     font-weight: bold;
 }
+.validator{
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    cursor: pointer;
+}
 
 .skip-button:hover {
     background-color: #0c0;
