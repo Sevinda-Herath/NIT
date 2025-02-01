@@ -20,7 +20,7 @@
     </div>
     <div class="content">
         <div class="timer">
-            <h2 id ="rm">TOURNAMENT STARTS IN</h2>
+            <h1 id ="rm">TOURNAMENT STARTS IN</h1>
             <div id="countdown">
                   <ul>
                       <li><span id="days"></span>days</li>
@@ -35,7 +35,7 @@
         </div>
         
     <div class="brand-logos">
-        <li><img class="" src="https://raw.githubusercontent.com/Sevinda-Herath/NIT-Esports-Inner-Fac-Website/refs/heads/main/images/NIT.png" alt="NIT Logo"></li>
+        <img class="" src="https://raw.githubusercontent.com/Sevinda-Herath/NIT-Esports-Inner-Fac-Website/refs/heads/main/images/NIT.png" alt="NIT Logo">
     </div>
     <div class="game-line">
     <ol>
@@ -53,6 +53,7 @@
     </div>
     <script src="timer.js"></script>
     <script src="index.js"></script>
+    <script src="loading.js"></script>
     
 <img class="bg-img" src="https://raw.githubusercontent.com/Sevinda-Herath/NIT-Esports-Inner-Fac-Website/refs/heads/main/images/Ghost-img.png" alt="Background Image">
 
@@ -63,160 +64,4 @@
     </div>
 </div>
 </body>
-<script>
-    const messages = [  
-        ' . . .',
-        ' 🔥 Initializing Network Connection ...',  
-        ' 🎮 Retrieving Necessary Assets ...',  
-        ' 🏆 Requesting Server Resources...',  
-        ' 🔒 Establishing Secure Session...',  
-        ' 🚀 Connection Successful, Ready for Operations...',
-        ' ☠️ Let"s Do This !!!! ☠️ ' 
-    ];  
-    
-    window.addEventListener('load', function() {
-        const terminalContent = document.getElementById('terminal-content');
-        const skipButton = document.getElementById('skip-button');
-        let messageIndex = 0;
-        let currentInterval;
-    
-        // Hide main content and pause all animations
-        document.body.style.visibility = 'hidden';
-        document.documentElement.style.setProperty('--animation-play-state', 'paused');
-        document.getElementById('loading-screen').style.visibility = 'visible';
-    
-        function skipAnimation() {
-            if (currentInterval) clearInterval(currentInterval);
-            document.getElementById('loading-screen').style.opacity = '0';
-            document.body.style.visibility = 'visible';
-            document.documentElement.style.setProperty('--animation-play-state', 'running');
-            setTimeout(() => {
-                document.getElementById('loading-screen').style.display = 'none';
-            }, 500);
-        }
-    
-        skipButton.addEventListener('click', skipAnimation);
-    
-        function typeMessage(message) {
-            let i = 0;
-            currentInterval = setInterval(() => {
-                terminalContent.innerHTML += message.charAt(i);
-                i++;
-                if (i === message.length) {
-                    clearInterval(currentInterval);
-                    terminalContent.innerHTML += '<br>>';
-                    messageIndex++;
-                    if (messageIndex < messages.length) {
-                        setTimeout(() => typeMessage(messages[messageIndex]), 500);
-                    } else {
-                        setTimeout(skipAnimation, 1000);
-                    }
-                }
-            }, 50);
-        }
-    
-        typeMessage(messages[0]);
-    });
-    </script>
-    
-    <style>
-    /* Add this to control all animations */
-    :root {
-        --animation-play-state: paused;
-    }
-    
-    * {
-        animation-play-state: var(--animation-play-state) !important;
-    }
-    
-    #loading-screen {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-        transition: opacity 0.5s;
-        visibility: visible;
-    }
-    
-    .terminal {
-        width: 90%;
-        max-width: 800px;
-        height: auto;
-        min-height: 300px;
-        background-color: #000;
-        border: 4px double #0f0;
-        border-radius: 15px;
-        padding: 20px;
-        font-family: "Iceberg", serif;
-        text-transform: uppercase;
-        color: #0f0;
-        overflow: hidden;
-        position: relative;
-        margin: 10px;
-    }
-    
-    .skip-button {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        padding: 8px 16px;
-        background-color: #0f0;
-        color: #000;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-family: 'Ubuntu', monospace;
-        font-weight: bold;
-    }
-    
-    .skip-button:hover {
-        background-color: #0c0;
-    }
-    
-    #terminal-content {
-        font-size: clamp(14px, 2.5vw, 16px);
-        line-height: 1.5;
-        word-wrap: break-word;
-    }
-    
-    #terminal-content::after {
-        content: '▋';
-        animation: blink 1s infinite;
-    }
-    
-    @keyframes blink {
-        50% { opacity: 0; }
-    }
-    
-    @media (max-width: 768px) {
-        .terminal {
-            width: 95%;
-            min-height: 450px;
-            padding: 15px;
-            font-size: 13px;
-        }
-        
-        .skip-button {
-            padding: 6px 12px;
-            font-size: 13px;
-        }
-    }
-    
-    @media (max-width: 550px) {
-        .terminal {
-            width: 90%;
-            min-height: 350px;
-            font-size: 10px;
-        }
-        .skip-button {
-            font-size: 11px;
-        }
-    }
-    </style>
 </html>
