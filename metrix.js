@@ -16,7 +16,8 @@ const alphabet = letters + numbers;
 let fontSize = 10;
 let columns = canvas.width / fontSize;
 let drops = [];
-let animationInterval;
+let animationId;
+let isAnimating = false;
 
 function initDrops() {
     canvas.width = window.innerWidth;
@@ -42,6 +43,10 @@ function draw() {
         }
         drops[i]++;
     }
+
+    if (isAnimating) {
+        animationId = requestAnimationFrame(draw);
+    }
 }
 
 window.addEventListener('resize', initDrops);
@@ -49,5 +54,7 @@ window.addEventListener('resize', initDrops);
 // Initialize and start animation with delay
 initDrops();
 setTimeout(() => {
-    animationInterval = setInterval(draw, 33);
-}, 1000); // 2000ms = 2 seconds delay
+    isAnimating = true;
+    draw();
+}, 1000);
+
