@@ -121,7 +121,24 @@ body{
     transform: translateY(1px);
     box-shadow: 0 2px 10px rgba(107, 44, 245, 0.2);
 }
-
+@media all and (max-width: 1280px) {
+    .navbar ul {
+        justify-content: center;
+    }
+    .navbar ul li {
+        padding: 8px;
+    }
+    .navbar ul li a {
+        font-size: 28px;
+    }
+    .register-nav {
+        padding: 8px 16px;
+    }
+    .register .button {
+        padding: 16px 32px;
+        font-size: 2rem;
+    }
+}
 @media all and (max-width: 768px) {
     .navbar ul {
         justify-content: center;
@@ -190,24 +207,42 @@ body{
     font-weight: 600;
   }
    
-  @media all and (max-width: 768px) {
-    .timer{
+@media all and (max-width: 1280px) {
+    .timer {
+        height: 50vh;
+        margin-bottom: -5vh;
+    }
+    .timer h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+    .timer li {
+        font-size: 20px;
+    }
+    .timer li span {
+        font-size: 48px;
+    }
+    .register button {
+        margin-top: 30px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .timer {
         height: 45vh;
         margin-bottom: -8vh;
-
     }
     .timer h1 {
         font-size: 28px;
         margin-bottom: 20px;
     }
-    
     .timer li {
         font-size: 16px;
     }
     .timer li span {
         font-size: 40px;
     }
-    .register button{
+    .register button {
         margin-top: 40px;
     }
 }
@@ -254,16 +289,32 @@ object-fit: contain;
     100% { transform: translateX(-100%); }
 }
 
+@media all and (max-width: 1280px) {
+    .gl-logo {
+        height: 25px;
+        filter: grayscale(0%);
+    }
+    .game-line li {
+        gap: 40px;
+    }
+    .game-line {
+        margin-top: 1vh;
+    }
+    @keyframes scroll {
+        0% { transform: translateX(200%); }
+        100% { transform: translateX(-200%); }
+    }
+}
+
 @media all and (max-width: 768px) {
     .gl-logo {
         height: 30px;
         filter: grayscale(0%);
-
     }
     .game-line li {
         gap: 30px;
     }
-    .game-line{
+    .game-line {
         margin-top: 15vh;
     }
     @keyframes scroll {
@@ -282,6 +333,23 @@ object-fit: contain;
     animation: fadeInDown 6s ease-out;
     animation-fill-mode: forwards;
 }
+@media all and (max-width: 1280px) {
+    body {
+        background-size: 600px;
+        background-blend-mode: luminosity;
+    }
+    .brand-logos img {
+        height: 50px;
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+    .brand-logos img:hover {
+        transform: scale(1.1);
+        box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+        box-shadow: #4b838d 0 0 15px;
+    }
+}
+
 
 @media all and (max-width: 768px) {
     body{
@@ -329,13 +397,13 @@ object-fit: contain;
 
 @media screen and (max-width: 768px) {
     .bg-img {
-    overflow: hidden;
-    width: 60%;
-    min-width: 500px;
-    left: 55%;
-    transform: translateX(-50%);
-    filter: grayscale(100%);
-    }
+        overflow: hidden;
+        width: 80%;
+        min-width: 320px;
+        left: 55%;
+        transform: translateX(-50%);
+        filter: grayscale(100%);
+        }
 }
 
 @media screen and (max-width: 480px) {
@@ -407,6 +475,30 @@ iframe{
 .contact a:hover{
     color: #0f0;
 }
+
+@media all and (max-width: 1280px){
+    .about, .contact{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about{
+        text-align: justify;
+        margin-top: 20vh;
+    }
+    .contact{
+        margin-top: 20vh;
+    }
+    .about h2, .contact h2{
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+    .about p, .contact p{
+        font-size: 1.5rem;
+        font-weight: 200; 
+    }
+}
+
 @media all and (max-width: 768px){
     .about, .contact{
         width: 70%;
@@ -426,7 +518,7 @@ iframe{
     }
     .about p, .contact p{
         font-size: 1rem;
-        font-weight:100; 
+        font-weight: 100; 
     }
 }
 
