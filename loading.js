@@ -5,8 +5,8 @@ const messages = [
     ' 🎮 Retrieving Necessary Assets ...',  
     ' 🏆 Requesting Server Resources...',  
     ' 🔒 Establishing Secure Session...',  
-    ' 🚀 Connection Successful, Ready for Operations...',
-    ' ☠️ Let"s Do This !!!! ☠️ ' 
+    ' 🚀 Connection Successful...',
+    ' ☠️ Ready for Operations... ' 
 ];  
 
 window.addEventListener('load', function() {
@@ -47,7 +47,7 @@ window.addEventListener('load', function() {
                     setTimeout(skipAnimation, 1000);
                 }
             }
-        }, 50);
+        }, 15);
     }
 
     typeMessage(messages[0]);

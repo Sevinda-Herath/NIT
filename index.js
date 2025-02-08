@@ -50,4 +50,4 @@ window.addEventListener('resize', initDrops);
 initDrops();
 setTimeout(() => {
     animationInterval = setInterval(draw, 33);
-}, 16200); // 2000ms = 2 seconds delay
+}, 9000); // 2000ms = 2 seconds delay
