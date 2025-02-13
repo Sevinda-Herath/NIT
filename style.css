@@ -366,12 +366,12 @@ object-fit: contain;
         height: 50px;
         padding: 15px 10px;
         border-radius: 5px;
-        background-color: #29438b;
+        background-color: #000;
     }
     .brand-logos img:hover{
         transform: scale(1.1);
         box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
-        box-shadow: #4b838d 0 0 15px;
+        box-shadow: inset 0 0 15px;
 
     }
 }
