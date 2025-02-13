@@ -366,7 +366,6 @@ object-fit: contain;
         height: 50px;
         padding: 15px 10px;
         border-radius: 5px;
-        background-color: #000;
     }
     .brand-logos img:hover{
         transform: scale(1.1);
